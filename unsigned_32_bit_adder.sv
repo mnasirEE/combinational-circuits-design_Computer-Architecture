@@ -16,11 +16,16 @@ module unsigned_32_bit_adder (
 
 );
 
-assign cin =0;
-// using assign statement
-// using full adder equations
-assign sout = a^b^cin;
-assign cout = (a^b)&cin | a&b;
+
+// using + 
+wire [31:0] sum_temp;
+wire [31:0] carry;
+
+assign sum_temp = in1 + in2;
+assign sout = sum_temp + cin;
+assign cout = (in1 ^ in2) & cin | in1 & in2;
+
+
 
     
 endmodule
