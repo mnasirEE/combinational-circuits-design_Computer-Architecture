@@ -4,7 +4,7 @@
 // if num1>0 and num2<0 then take 2'scomplement of num2 and add it into num1
 // if num1<0 and num2>0 then take 2'scomplement of num1 and add it into num2
 
-module signed_2's_comp_add (
+module signed_2s_comp_add (
     input logic [31:0] num1,
     input logic [31:0] num2,
     output logic [31:0] s_add
