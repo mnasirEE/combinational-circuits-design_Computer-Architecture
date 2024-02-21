@@ -10,18 +10,20 @@ module signed_2s_comp_add (
     output logic [31:0] s_add
 );
 
-if ((num1 >0 & num2>0) | (num1<0 & num2<0) ) begin
-    s_add = num1 + num2
-end
+initial begin
+    if ((num1 >0 & num2>0) | (num1<0 & num2<0) ) begin
+        assign s_add = num1 + num2;
+    end
 
-else if (num1 >0 & num2<0) begin
-    num2 = !num2 + 1;
-    s_add = num1 +num2;
-end
+    else if (num1 >0 & num2<0) begin
+        assign num2 = !num2 + 1;
+        assign s_add = num1 +num2;
+    end
 
-else if (num1<0 & num2>0) begin
-    num1 = !num1 +1;
-    s_add = num1+num2;
+    else if (num1<0 & num2>0) begin
+        assign num1 = !num1 +1;
+        assign s_add = num1+num2;
+    end
 end
 
     
