@@ -5,7 +5,7 @@
 
 // define module
 
-module 32_bit_unsigned_adder (
+module unsigned_32_bit_adder (
     // using wire datatype because, it is a combinational design and stores nothing
     // wire used for combinational circuits design while reg used in sequential logic design
     // define all main inputs

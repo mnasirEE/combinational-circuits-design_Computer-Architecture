@@ -1,7 +1,7 @@
 // 32_bit_unsigned_adder_tb
 
 // define module
-module 32_bit_unsigned_adder_tb;
+module unsigned_32_bit_adder_tb;
 
 wire [31:0] in_1, in_2, sout1, cout1;
 wire cin1;
