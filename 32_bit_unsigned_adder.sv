@@ -16,6 +16,7 @@ module 32_bit_unsigned_adder (
 
 );
 
+assign cin =0;
 // using assign statement
 // using full adder equations
 assign sout = a^b^cin;
