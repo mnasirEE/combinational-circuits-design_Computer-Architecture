@@ -10,21 +10,21 @@ module signed_2s_comp_add (
     output logic [31:0] s_add
 );
 
-initial begin
-    if ((num1 >0 & num2>0) | (num1<0 & num2<0) ) begin
-        assign s_add = num1 + num2;
-    end
 
-    else if (num1 >0 & num2<0) begin
-        assign num2 = !num2 + 1;
-        assign s_add = num1 +num2;
+ always_comb begin
+        if ((num1[31] == 1 && num2[31] == 1) || (num1[31] == 0 && num2[31] == 0)) begin
+            // If both numbers are positive or both are negative, perform normal addition
+            s_add = num1 + num2;
+        end
+        else if (num1[31] == 0 && num2[31] == 1) begin
+            // If num1 is positive and num2 is negative, perform subtraction (num1 - |num2|)
+            s_add = num1 - (~num2 + 1);
+        end
+        else if (num1[31] == 1 && num2[31] == 0) begin
+            // If num1 is negative and num2 is positive, perform subtraction (num2 - |num1|)
+            s_add = num2 - (~num1 + 1);
+        end
     end
-
-    else if (num1<0 & num2>0) begin
-        assign num1 = !num1 +1;
-        assign s_add = num1+num2;
-    end
-end
 
     
 endmodule
