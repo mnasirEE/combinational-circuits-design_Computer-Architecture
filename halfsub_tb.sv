@@ -27,7 +27,7 @@ initial begin
 end
 
 initial begin
-    $monitor("sout =%b, cout=%b, stotal=%b, a=%b, b=%b, cin=%b", sout1,cout1, stotal1,a1,b1,cin1);
+    $monitor("in1 =%b, in2=%b, diff1=%b, bow1=%b",in_1,in_2,diff,bow);
 end
     
 endmodule
