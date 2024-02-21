@@ -1,7 +1,7 @@
 // 32_bit_unsigned_adder_tb
 
 // define module
-module unsigned_32_bit_adder_tb;
+module u_32b_add_2_tb;
 
 logic [31:0] in_1, in_2;
 logic [31:0] sout1, cout1;
@@ -9,7 +9,7 @@ logic cin1;
 
 localparam period = 10; // 10 unit period
 
-unsigned_32_bit_adder UUT(
+u_32b_add_2 UUT(
     .in1(in_1),
     .in2(in_2),
     .cin(cin1),
