@@ -3,7 +3,7 @@ module fulladder (
     input logic a,b,cin
 );
 
-assign sout = a^b^cin;
-assign cout = (a^b)&cin | (a&b);
-    
+assign sout = a ^ b ^ cin;
+assign cout = ( (a ^ b) & cin ) | (a&b);
+
 endmodule
