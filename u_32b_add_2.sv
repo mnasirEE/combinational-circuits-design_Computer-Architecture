@@ -19,7 +19,7 @@ fulladder s9 (.a(in1[9]), .b(in2[9]), .cin(cout[8]), .sout(sout[9]),.cout(cout[9
 fulladder s10 (.a(in1[10]), .b(in2[10]), .cin(cout[9]), .sout(sout[10]),.cout(cout[10]));
 fulladder s11(.a(in1[11]), .b(in2[11]), .cin(cout[10]), .sout(sout[11]),.cout(cout[11]));
 fulladder s12 (.a(in1[12]), .b(in2[12]), .cin(cout[11]), .sout(sout[12]),.cout(cout[12]));
-fulladder s13 (.a(in1[3]), .b(in2[13]), .cin(cout[12]), .sout(sout[13]),.cout(cout[13]));
+fulladder s13 (.a(in1[13]), .b(in2[13]), .cin(cout[12]), .sout(sout[13]),.cout(cout[13]));
 fulladder s14 (.a(in1[14]), .b(in2[14]), .cin(cout[13]), .sout(sout[14]),.cout(cout[14]));
 fulladder s15 (.a(in1[15]), .b(in2[15]), .cin(cout[14]), .sout(sout[15]),.cout(cout[15]));
 fulladder s16 (.a(in1[16]), .b(in2[16]), .cin(cout[15]), .sout(sout[16]),.cout(cout[16]));
